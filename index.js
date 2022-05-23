@@ -1,37 +1,32 @@
-//
-//**** Pseudocode for my btn *
-//initialize count as 0
-//listen  for clicks on the incremet btn
-//increment the count variables when the btn is clicked
-//change the count-el in the HTML to reflect the new count
 
-let saveEl = document.getElementById('save-el');
- 
-let countEL = document.getElementById('count-el');
 let count = 0;
+const value = document.getElementById('value');
+const btns = document.querySelectorAll('.btn');
 
-console.log(countEL);
+btns.forEach(function (btn) {
+     btn.addEventListener('click', function(e){
+        const styles = e.currentTarget.classList;
 
-function increment(){
+        if(styles.contains('increment')){
+            count++;
+        };
 
-    count += 1;
-    console.log(count);
-    countEL.innerHTML = count;
+        if(styles.contains('decrement')){
+            if(count > 0){
+                count--;
+            };
+        }
+     
+        else if(styles.contains('save')){
+            let saveEl = document.getElementById('save-el');
+            let countStr = count + ' - ';
+            saveEl.textContent += countStr;
+            count = 0;
+            
+        };
 
-}
+        value.textContent = count;
 
+     });
 
-//**save button */
-
-function save(){
-
-    let countStr = count + ' - ';
-    saveEl.innerHTML += countStr;
-    countEL.innerHTML = 0;
-    count = 0;
-   
-  
-}
-
-
-
+});

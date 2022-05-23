@@ -3,15 +3,18 @@
         <link rel="stylesheet" href="css/index.css">
     </head>
         <body>
-            <h1>People Entered:</h1>
-            <h2 id="count-el">0</h2>
+            <h1>Train Station Counter</h1>
+            <h2 id="value">0</h2>
             <!--***CREATE AN INCREMENNT BUTTON WITH id ='increment-btn' ***-->
-            <button id="increment-btn" onclick="increment()"> INCREMENT</button>
+            <button class="increment btn"> INCREMENT</button>
+            <br>
+            <br>
+            <button class="decrement btn"> DECREMENT</button>
             <br>
             <br>
 
             <!--** CREATE A SAVE BUTTON WITH id = 'save-btn' **-->
-            <button id="save-btn" onclick="save()">SAVE</button>
+            <button class="save btn">SAVE & RESET</button>
             <p id="save-el"><b>Previous Entires: &nbsp;</b></p>
             <script src="index.js"> </script>
         </body>

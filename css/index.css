@@ -31,15 +31,19 @@ button{
     width: 200px;
     margin-bottom: 5px;
     border-radius: 5px;
+    letter-spacing: 2px;
 }
 
-#increment-btn{
+.decrement{
     background: darkred;
 }
 
-#save-btn{
+.save{
+    background: blueviolet;
+}
+
+.increment{
     background: darkgreen;
     display: inline-block;
 
-   
 }
